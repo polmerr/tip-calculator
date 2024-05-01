@@ -1,0 +1,244 @@
+.wrapper{
+    background-color: white;
+    padding:35px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    display: flex;
+    flex-direction:column ;
+    box-shadow: 0px -3px 7px 0px rgba(0,0,0,0.05);
+
+}
+
+
+.bill-div, .select, .number-people{
+    color:hsl(183, 100%, 15%);
+    margin-bottom: 20px;
+}
+
+.number-people{
+    position: relative;
+}
+.error-msg.show{
+    display: block;
+}
+
+.error-msg{
+    position: absolute;
+    top:0;
+    right: 0;
+    color: rgba(255,0,0,0.6);
+    display: none;
+}
+
+
+
+.bill-box, .persons-box{
+    padding:10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsla(185, 41%, 84%, 0.25);
+    
+}
+.bill-box img{
+    
+    width:12px;
+    height: 20px;
+}
+.bill-box input, .persons-box input{
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: right;
+    color:hsl(183, 100%, 15%);
+    font-family: 'Space Mono';
+    font-size: 22px;
+    font-weight: 800;
+    height: 40px;
+}
+
+.bill-box input:focus, .persons-box input:focus{
+    outline: none;
+}
+
+.bill-box input::placeholder, .persons-box input::placeholder{
+    color: hsl(184, 14%, 56%);
+    text-align: right;
+    font-size: 25px;
+}   
+
+.select-tip{
+    flex-wrap: wrap;
+    display: flex;
+}
+.tip-selection, .custom{
+    min-width: 45%;
+    max-width: 45%;
+    margin: 2.5%;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    padding:2%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tip-selection.unselected{
+    background-color: hsl(183, 100%, 15%);
+}
+.tip-selection.selected{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+.tip-selection.unselected:hover{
+    background-color: hsla(172, 67%, 45%, 0.4) ;
+    color: hsl(183, 100%, 15%);
+}
+
+
+.result-box{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    background-color: hsl(183, 100%, 15%) ;
+    padding:20px;
+    padding-top: 25px;
+    border-radius: 10px;
+}
+.amount, .total{
+    display: flex;
+    justify-content: space-between;
+}
+.result-number{
+    color:hsl(172, 67%, 45%);
+    font-size: 29px;
+}
+.reset{
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    padding: 10px;
+    color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.reset.not-active{
+    background-color: hsla(185, 41%, 84%, 15%);
+    color: hsla(185, 41%, 84%, 10%);  
+    cursor: auto;
+}
+.reset.active:hover{
+    
+    background-color: hsla(185, 41%, 84%);
+}
+
+h4{
+    color: hsl(184, 14%, 56%);
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.result-left h4{
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+.result-left p{
+    color: hsl(184, 14%, 56%);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.custom{
+    background-color: hsla(185, 41%, 84%, 0.25);
+    color: hsl(183, 100%, 15%) ;
+    
+}
+
+.custom input{
+    max-width: 100%;
+    min-height: 100%;
+    line-height: 100%;
+    outline: none;
+    border: none;
+    text-align: center;
+    background: none;
+    font-size: 22px;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+
+}
+
+input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+      }
+
+.custom input:focus{
+    text-align: right;
+    
+}
+
+.custom input::placeholder{
+    color: hsl(186, 14%, 43%);
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+}
+
+.selected{
+    border: 2px solid hsl(172, 67%, 45%);
+    border-radius: 10px;
+    
+}
+.persons-box.invalid{
+    border:2px solid rgba(255,0,0,0.5);
+}
+
+
+@media (min-width:920px) {
+        .wrapper{
+            width: 65%;
+            padding: 30px;
+            margin: auto;
+            display: flex;
+            flex-direction: row ;
+            gap:30px;
+            border-radius: 25px;
+            box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.05);
+        }
+
+        .desktop-left, .desktop-right{
+            flex:1;
+        }
+        .tip-selection, .custom{
+            font-size: 10px;
+            max-width: 29%;
+            min-width: 29%;
+            margin: 1%;
+        }
+        .custom{
+            font-size: 10px;
+        }
+        .result-box{
+            min-height: 100%;
+            padding: 40px 50px;
+            gap:30px;
+        }
+        .result-number{
+            font-size: 37px;
+        }
+        .reset{
+            margin-top: auto;
+        }
+
+        h4{
+            font-size: 14px;
+        }
+        
+}

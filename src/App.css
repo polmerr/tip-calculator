@@ -1,0 +1,19 @@
+.splitter{
+    text-align: center;
+    letter-spacing: 3px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    color:hsl(186, 14%, 43%);
+    font-weight: 1000;
+}
+
+.app{
+    background-color: hsl(185, 41%, 84%)
+}
+
+@media (min-width:800px) {
+    .splitter{
+        font-size: 12px;
+        padding:45px;
+    }
+}
